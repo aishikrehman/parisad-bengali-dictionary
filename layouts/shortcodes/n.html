@@ -1,0 +1,12 @@
+<li class="list-group-item rounded-3 py-3" for="listGroupCheckableRadios1" id="{{ index .Params 0 }}">
+    <b>{{ index .Params 0 }}</b><i class="ms-3">বিশেষ্য</i>
+    <ul class="opacity-50">
+        <li>১. {{ index .Params 1 }}</li>
+        {{ with (index .Params 2) }}
+        <li>২. {{ . }}</li>
+        {{ end }}
+        {{ with (index .Params 3) }}
+        <li>৩. {{ . }}</li>
+        {{ end }}
+    </ul>
+</li>

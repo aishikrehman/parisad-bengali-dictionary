@@ -1,0 +1,73 @@
+.alphabet {
+	width: 100%;
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid #DFDFDF;
+	list-style: none;
+	z-index: 98;
+}
+
+.alphabet li {
+	float: left;
+}
+
+.alphabet li a {
+	padding: 5px 10px 2px 10px;
+	background: #F4F4F4;
+	color: #333;
+	border: 1px solid #E4E4E4;
+	text-decoration: none;
+	text-shadow: 1px 1px #FFF;
+	display: block;
+	margin: 6px 4px;
+	font-size: 135%;
+	font-weight: bold;
+	border-radius: 2px;
+	box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .8);
+}
+
+.eng .alphabet li a {
+	font-size: 96%;
+}
+
+.alphabet li:hover a,
+.alphabet li .active {
+	background: #FFF;
+}
+
+}
+
+.dicDisplay {
+	box-shadow: 0 0 7px rgba(102, 102, 102, 0.3);
+	position: relative;
+	padding: 25px;
+	margin: 25px 0;
+	background: #FFF;
+}
+
+.dicDisplay h2 {
+	font-size: 130%;
+	padding: 15px 0 15px 30px;
+	border-bottom: 1px solid #CCC;
+	font-weight: normal;
+}
+
+.dicDisplay ul {
+	width: 100%;
+	position: relative;
+}
+
+.dicDisplay ul li {
+	position: relative;
+	border-bottom: 1px solid #EFEFEF;
+	padding: 12px 30px;
+	margin: 0;
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.dicDisplay li:last-child {
+	border: none;
+}

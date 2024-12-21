@@ -1,0 +1,38 @@
+{{ define "style" }}
+<link rel="stylesheet" href="{{ .Site.BaseURL }}css/parisad.css">
+{{ end }}
+{{ define "main" }}
+<div class="my-5">
+  <div class="container">
+
+    <ul class="alphabet">
+      {{ $titles := slice "অ" "আ" "ই" "ঈ" "উ" "ঊ" "ঋ" "এ" "ঐ" "ও" "ঔ" "ক" "খ" "গ" "ঘ" "ঙ" "চ" "ছ" "জ" "ঝ" "ঞ" "ট" "ঠ"
+      "ড" "ঢ" "ণ" "ত" "থ" "দ" "ধ" "ন" "প" "ফ" "ব" "ভ" "ম" "য" "র" "ল" "শ" "ষ" "স" "হ" }}
+
+      {{ range $index, $title := $titles }}
+      <li>
+        {{/* <a href="/{{ add $index 1 }}/">Page {{ add $index 1 }}: {{ $title }}</a> */}}
+        <a href="/{{ add $index 1 }}/">{{ $title }}</a>
+      </li>
+      {{ end }}
+    </ul>
+    <h2 class="text-center my-5">{{ .Title}}</h2>
+    <hr>
+    {{ .Content}}
+    <div class="mt-5 text-center">
+      {{ $current := .File.BaseFileName }}
+      {{ $currentNumber := int $current }}
+      {{ if gt $currentNumber 1 }}
+      {{ $prev := sub $currentNumber 1 }}
+      <a href="/{{ $prev }}/">Previous Page {{ $prev }}|| </a>
+      {{ end }}
+      Current Page {{ $currentNumber}} ({{.Title}}) ||
+      {{ if lt $currentNumber 48 }}
+      {{ $next := add $currentNumber 1 }}
+      <a href="/{{ $next }}/">Next Page {{ $next }} >></a>
+      {{ end }}
+    </div>
+
+  </div>
+</div>
+{{ end }}
