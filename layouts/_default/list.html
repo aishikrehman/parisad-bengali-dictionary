@@ -19,7 +19,7 @@
     <h2 class="text-center my-5">{{ .Title}}</h2>
     <hr>
     {{ .Content}}
-    <div class="mt-5 text-center">
+    {{/*  <div class="mt-5 text-center">
       {{ $current := .File.BaseFileName }}
       {{ $currentNumber := int $current }}
       {{ if gt $currentNumber 1 }}
@@ -31,7 +31,7 @@
       {{ $next := add $currentNumber 1 }}
       <a href="/{{ $next }}/">Next Page {{ $next }} >></a>
       {{ end }}
-    </div>
+    </div>  */}}
 
   </div>
 </div>
